@@ -15,7 +15,6 @@ async def run(websession):
         host=input('Enter IP Address: '),
         websession=websession)
     data = await projector.send_command(PWR_OFF)
-    data = await projector.send_command(PWR_OFF)
     print(data)
 
 asyncio.get_event_loop().run_until_complete(main()) 
