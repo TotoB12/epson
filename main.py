@@ -12,8 +12,9 @@ async def main():
 
 async def run(websession):    
     projector = epson.Projector(
-        host='HOSTNAME',
+        host=input('Enter IP Address: '),
         websession=websession)
+    data = await projector.send_command(PWR_OFF)
     data = await projector.send_command(PWR_OFF)
     print(data)
 
